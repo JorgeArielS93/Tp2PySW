@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Precios</title>
+</head>
+<body>
+    <div class="container">
+        <header class="row">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark" role="navigation" aria-label="Menú principal">
+              <div class="container-fluid">
+                <a class="navbar-brand" href="/index.html">Sport Energy Gym</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Alternar navegación">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                      <a class="nav-link" href="/pages/clases.html">Clases</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/pages/entrenadores.html">Entrenadores</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/pages/precios.html">Precios</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/pages/blog.html">Blog</a>
+                    </li>
+                    <!-- Contacto con submenú -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownContacto"  role="button" aria-expanded="false">
+                          Contacto
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownContacto">
+                            <li><a class="dropdown-item" href="/pages/contacto.html">Formulario</a></li>
+                        </ul>
+                      </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </header>
+
+        <section>
+            <div class="container my-5 tabla-precios">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <h2>Planes de Precios</h2>
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="togglePrecio">
+                    <label class="form-check-label" for="togglePrecio">Mostrar precios anuales</label>
+                  </div>
+                </div>
+              
+                <div class="table-responsive">
+                  <table class="table table-hover text-center align-middle" id="tablaPrecios">
+                    <thead class="table-primary">
+                      <tr>
+                        <th data-bs-toggle="tooltip" title="Nivel del plan">Plan</th>
+                        <th data-bs-toggle="tooltip" title="Acceso al gimnasio">Gimnasio</th>
+                        <th data-bs-toggle="tooltip" title="Incluye clases dirigidas">Clases</th>
+                        <th data-bs-toggle="tooltip" title="Acceso a piscina y spa">Extras</th>
+                        <th data-bs-toggle="tooltip" title="Precio mensual o anual">Precio</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Básico</td>
+                        <td>✔️</td>
+                        <td>❌</td>
+                        <td>❌</td>
+                        <td class="precio" data-mensual="20" data-anual="200">20€/mes</td>
+                      </tr>
+                      <tr>
+                        <td>Estándar</td>
+                        <td>✔️</td>
+                        <td>✔️</td>
+                        <td>❌</td>
+                        <td class="precio" data-mensual="35" data-anual="350">35€/mes</td>
+                      </tr>
+                      <tr>
+                        <td>Premium</td>
+                        <td>✔️</td>
+                        <td>✔️</td>
+                        <td>✔️</td>
+                        <td class="precio" data-mensual="50" data-anual="500">50€/mes</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              
+        </section>
+
+        <footer class="row bg-light py-5">
+            <div class="col-12 col-md-6 offset-md-3">
+              <form
+                id="formularioFooter"
+                class="needs-validation"
+                novalidate
+                role="form"
+                aria-label="Formulario de contacto en el pie de página">
+                <div class="mb-3">
+                  <label for="emailFooter" class="form-label h6">Suscríbete a nuestro newsletter</label>
+                  <input type="email" class="form-control" id="emailFooter" required  aria-required="true" aria-describedby="emailFooterError" placeholder="Correo electrónico"/>
+                  <div id="emailFooterError" class="invalid-feedback">Ingresá un email válido.</div>
+                </div>
+                <button type="submit" class="btn btn-primary" id="btnEnviarFooter" aria-label="Enviar formulario de contacto">
+                  <span id="spinnerFooter" class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+                  <span id="btnTextFooter">Enviar</span>
+                </button>
+              </form>
+            </div>
+          
+            <!-- Mapa de Google apuntando a San Salvador de Jujuy -->
+            <div class="col-12 mt-4">
+              <iframe
+                title="Mapa de ubicación - Sport Energy Gym"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3582.2553722327285!2d-65.30771962483958!3d-24.185786878351385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941bc441c27493ed%3A0xd8960ad78e8c179!2sSan%20Salvador%20de%20Jujuy%2C%20Jujuy!5e0!3m2!1ses!2sar!4v1713356816169!5m2!1ses!2sar"
+                width="100%"
+                height="300"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+        </footer>
+    </div>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>

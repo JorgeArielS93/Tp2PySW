@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Inicio</title>
+  </head>
+  <body>
+    <div class="container">
+        <header class="row">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark" role="navigation" aria-label="Menú principal">
+              <div class="container-fluid">
+                <a class="navbar-brand" href="/index.html">Sport Energy Gym</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Alternar navegación">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                      <a class="nav-link" href="/pages/clases.html">Clases</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/pages/entrenadores.html">Entrenadores</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/pages/precios.html">Precios</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/pages/blog.html">Blog</a>
+                    </li>
+                    <!-- Contacto con submenú -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownContacto" role="button" aria-expanded="false">
+                          Contacto
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownContacto">
+                          <li><a class="dropdown-item" href="/pages/contacto.html">Formulario</a></li>
+                        <!--  <li><a class="dropdown-item" href="#mapa">Ubicación</a></li> -->
+                        <!--  <li><a class="dropdown-item" href="mailto:info@gym.com">Email</a></li> -->
+                      </ul>
+                      </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </header>
+          <section class="row" aria-label="Sección principal de bienvenida">
+            <!-- Hero con video de fondo -->
+            <div class="position-relative overflow-hidden" style="height: 100vh">
+              <!-- Video de fondo decorativo -->
+              <video
+                autoplay
+                muted
+                loop
+                playsinline
+                aria-hidden="true"
+                tabindex="-1"
+                class="position-absolute w-100 h-100 object-fit-cover"
+                style="top: 0; left: 0; z-index: -1"
+              >
+                <source src="video/entrenamiento.mp4" type="video/mp4" />
+              </video>
+              <!-- Overlay animado -->
+              <div
+                id="hero-overlay"
+                class="position-absolute top-50 start-50 translate-middle text-center text-white p-4"
+                style="display: none"
+              >
+                <h1 class="display-3 fw-bold">Bienvenido a ¡Sport Energy Gym!</h1>
+                <p class="lead">Entrená fuerte. Viví mejor.</p>
+              </div>
+            </div>
+          </section>
+      <!-- Clases destacadas -->
+<section id="clases" class="py-5" aria-labelledby="clases-destacadas-titulo">
+    <div class="container">
+      <h2 id="clases-destacadas-titulo" class="text-center mb-5">Clases destacadas</h2>
+      <div class="row g-4">
+        <div class="col-12 col-sm-6 col-md-3">
+          <article class="card clase-card shadow-sm" role="group" aria-label="Clase de musculación">
+            <img src="img/musculacion.jpg" class="card-img-top" alt="Persona entrenando musculación">
+            <div class="card-body text-center">
+              <h3 class="card-title h5">Musculación</h3>
+              <p class="card-text">Fortalecé tu cuerpo con entrenamientos de fuerza.</p>
+            </div>
+          </article>
+        </div>
+        <div class="col-12 col-sm-6 col-md-3">
+          <article class="card clase-card shadow-sm" role="group" aria-label="Clase de CrossFit">
+            <img src="img/crossfit.jpg" class="card-img-top" alt="Ejercicio de CrossFit">
+            <div class="card-body text-center">
+              <h3 class="card-title h5">CrossFit</h3>
+              <p class="card-text">Entrenamientos intensos y funcionales para desafiarte.</p>
+            </div>
+          </article>
+        </div>
+        <div class="col-12 col-sm-6 col-md-3">
+          <article class="card clase-card shadow-sm" role="group" aria-label="Clase de yoga">
+            <img src="img/yoga.jpg" class="card-img-top" alt="Postura de yoga">
+            <div class="card-body text-center">
+              <h3 class="card-title h5">Yoga</h3>
+              <p class="card-text">Conectá mente y cuerpo con nuestras clases de yoga.</p>
+            </div>
+          </article>
+        </div>
+        <div class="col-12 col-sm-6 col-md-3">
+          <article class="card clase-card shadow-sm" role="group" aria-label="Clase de spinning">
+            <img src="img/spinning.jpg" class="card-img-top" alt="Clase de spinning en bicicleta">
+            <div class="card-body text-center">
+              <h3 class="card-title h5">Spinning</h3>
+              <p class="card-text">Cardio al ritmo de la música en bicicletas indoor.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+               <!-- Contador animado -->
+<section id="contador" class="py-5 bg-light" aria-labelledby="titulo-contador">
+    <div class="container text-center">
+      <h2 id="titulo-contador" class="mb-4">Nuestra comunidad</h2>
+      <div class="row">
+        <div class="col-12 col-sm-6 col-md-3" role="group" aria-label="Miembros activos">
+          <h3 class="display-4 counter" data-target="500" aria-live="polite">0</h3>
+          <p>Miembros Activos</p>
+        </div>
+        <div class="col-12 col-sm-6 col-md-3" role="group" aria-label="Clases semanales">
+          <h3 class="display-4 counter" data-target="45" aria-live="polite">0</h3>
+          <p>Clases Semanales</p>
+        </div>
+        <div class="col-12 col-sm-6 col-md-3" role="group" aria-label="Entrenadores profesionales">
+          <h3 class="display-4 counter" data-target="4" aria-live="polite">0</h3>
+          <p>Entrenadores Profesionales</p>
+        </div>
+        <div class="col-12 col-sm-6 col-md-3" role="group" aria-label="Premios obtenidos">
+          <h3 class="display-4 counter" data-target="25" aria-live="polite">0</h3>
+          <p>Premios Obtenidos</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="testimonios" class="testimonios-section py-5" aria-labelledby="titulo-testimonios">
+    <div class="container">
+      <h2 id="titulo-testimonios" class="text-center mb-4">Lo que dicen nuestros alumnos</h2>
+  
+      <div id="carouselTestimonios" class="carousel slide" data-bs-ride="carousel" aria-label="Carrusel de testimonios" role="region">
+        <div class="carousel-inner testimonios-carousel-inner">
+          <div class="carousel-item active" role="group" aria-roledescription="slide" aria-label="Testimonio 1 de 3">
+            <div class="testimonio p-4 text-center">
+              <p class="testimonio-text">“¡Me cambió la vida! Las clases de spinning son increíbles.”</p>
+              <h5 class="testimonio-autor mt-3">— Ana G.</h5>
+            </div>
+          </div>
+          <div class="carousel-item" role="group" aria-roledescription="slide" aria-label="Testimonio 2 de 3">
+            <div class="testimonio p-4 text-center">
+              <p class="testimonio-text">“Entrenadores súper profesionales. ¡Recomendado 100%!”</p>
+              <h5 class="testimonio-autor mt-3">— Carlos M.</h5>
+            </div>
+          </div>
+          <div class="carousel-item" role="group" aria-roledescription="slide" aria-label="Testimonio 3 de 3">
+            <div class="testimonio p-4 text-center">
+              <p class="testimonio-text">“La mejor experiencia fitness que tuve.”</p>
+              <h5 class="testimonio-autor mt-3">— Laura T.</h5>
+            </div>
+          </div>
+        </div>
+  
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselTestimonios" data-bs-slide="prev" aria-label="Testimonio anterior">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselTestimonios" data-bs-slide="next" aria-label="Siguiente testimonio">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </section>
+  <footer class="row bg-light py-5">
+    <div class="col-12 col-md-6 offset-md-3">
+      <form
+        id="formularioFooter"
+        class="needs-validation"
+        novalidate
+        role="form"
+        aria-label="Formulario de contacto en el pie de página">
+        <div class="mb-3">
+          <label for="emailFooter" class="form-label h6">Suscríbete a nuestro newsletter</label>
+          <input type="email" class="form-control" id="emailFooter" required  aria-required="true" aria-describedby="emailFooterError" placeholder="Correo electrónico"/>
+          <div id="emailFooterError" class="invalid-feedback">Ingresá un email válido.</div>
+        </div>
+        <button type="submit" class="btn btn-primary" id="btnEnviarFooter" aria-label="Enviar formulario de contacto">
+          <span id="spinnerFooter" class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+          <span id="btnTextFooter">Enviar</span>
+        </button>
+      </form>
+    </div>
+  
+    <!-- Mapa de Google apuntando a San Salvador de Jujuy -->
+    <div class="col-12 mt-4">
+      <iframe
+        title="Mapa de ubicación - Sport Energy Gym"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3582.2553722327285!2d-65.30771962483958!3d-24.185786878351385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941bc441c27493ed%3A0xd8960ad78e8c179!2sSan%20Salvador%20de%20Jujuy%2C%20Jujuy!5e0!3m2!1ses!2sar!4v1713356816169!5m2!1ses!2sar"
+        width="100%"
+        height="300"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+</footer>
+</div>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Clases</title>
+</head>
+<body>
+    <div class="container">
+        <header class="row">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark" role="navigation" aria-label="Menú principal">
+              <div class="container-fluid">
+                <a class="navbar-brand" href="/index.html">Sport Energy Gym</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Alternar navegación">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                      <a class="nav-link" href="/pages/clases.html">Clases</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/pages/entrenadores.html">Entrenadores</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/pages/precios.html">Precios</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/pages/blog.html">Blog</a>
+                    </li>
+                    <!-- Contacto con submenú -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownContacto" role="button" aria-expanded="false">
+                          Contacto
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownContacto">
+                            <li><a class="dropdown-item" href="/pages/contacto.html">Formulario</a></li>
+                          <!--  <li><a class="dropdown-item" href="#mapa">Ubicación</a></li> -->
+                          <!--  <li><a class="dropdown-item" href="mailto:info@gym.com">Email</a></li> -->
+                        </ul>
+                      </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </header>
+          <section class="container my-5" aria-labelledby="galeria-titulo">
+            <h2 id="galeria-titulo" class="text-center mb-4">Nuestras Clases</h2>
+          
+            <!-- Botones de filtro -->
+            <div class="btn-group mb-4 d-flex justify-content-center flex-wrap" role="group" aria-label="Filtro de clases">
+              <button type="button" class="btn btn-outline-dark active" data-filter="todos" aria-pressed="true">Todos</button>
+              <button type="button" class="btn btn-outline-dark" data-filter="musculacion">Musculación</button>
+              <button type="button" class="btn btn-outline-dark" data-filter="crossfit">CrossFit</button>
+              <button type="button" class="btn btn-outline-dark" data-filter="yoga">Yoga</button>
+              <button type="button" class="btn btn-outline-dark" data-filter="spinning">Spinning</button>
+            </div>
+          
+            <!-- Galería -->
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4 galeria-filtrada">
+          
+              <div class="col clase-card" data-categoria="musculacion">
+                <div class="card h-100" role="region" aria-label="Clase de Musculación">
+                  <img src="/img/musculacion.jpg" class="card-img-top" alt="Clase de musculación con pesas">
+                  <div class="card-body">
+                    <h5 class="card-title">Musculación</h5>
+                    <p class="card-text">Entrena fuerza y resistencia con rutinas de pesas guiadas por expertos.</p>
+                  </div>
+                </div>
+              </div>
+          
+              <div class="col clase-card" data-categoria="crossfit">
+                <div class="card h-100" role="region" aria-label="Clase de CrossFit">
+                  <img src="/img/crossfit.jpg" class="card-img-top" alt="Grupo entrenando CrossFit">
+                  <div class="card-body">
+                    <h5 class="card-title">CrossFit</h5>
+                    <p class="card-text">Sesiones intensas que combinan fuerza, cardio y agilidad.</p>
+                  </div>
+                </div>
+              </div>
+          
+              <div class="col clase-card" data-categoria="yoga">
+                <div class="card h-100" role="region" aria-label="Clase de Yoga">
+                  <img src="/img/yoga.jpg" class="card-img-top" alt="Clase de yoga en postura de meditación">
+                  <div class="card-body">
+                    <h5 class="card-title">Yoga</h5>
+                    <p class="card-text">Relaja cuerpo y mente con sesiones centradas en respiración y flexibilidad.</p>
+                  </div>
+                </div>
+              </div>
+          
+              <div class="col clase-card" data-categoria="spinning">
+                <div class="card h-100" role="region" aria-label="Clase de Spinning">
+                  <img src="/img/spinning.jpg" class="card-img-top" alt="Personas haciendo spinning en bicicletas">
+                  <div class="card-body">
+                    <h5 class="card-title">Spinning</h5>
+                    <p class="card-text">Entrenamiento cardiovascular al ritmo de la música en bicicletas fijas.</p>
+                  </div>
+                </div>
+              </div>
+          
+              <!-- Más tarjetas aquí -->
+            </div>
+          </section>
+
+          <section class="container my-5 horarios" aria-labelledby="titulo-horarios">
+            <h2 id="titulo-horarios" class="text-center mb-4">Tabla de horarios</h2>
+          
+            <div class="table-responsive">
+              <table class="table table-striped table-bordered text-center align-middle">
+                <thead class="table-dark">
+                  <tr>
+                    <th scope="col">Día</th>
+                    <th scope="col">Musculación</th>
+                    <th scope="col">CrossFit</th>
+                    <th scope="col">Yoga</th>
+                    <th scope="col">Spinning</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Lunes</th>
+                    <td>8:00 - 9:00</td>
+                    <td>10:00 - 11:00</td>
+                    <td>12:00 - 13:00</td>
+                    <td>14:00 - 15:00</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Martes</th>
+                    <td>—</td>
+                    <td>17:00 - 18:00</td>
+                    <td>8:00 - 9:00</td>
+                    <td>—</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Miércoles</th>
+                    <td>17:00 - 18:00</td>
+                    <td>—</td>
+                    <td>14:00 - 15:00</td>
+                    <td>8:00 - 9:00</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Jueves</th>
+                    <td>—</td>
+                    <td>8:00 - 9:00</td>
+                    <td>—</td>
+                    <td>17:00 - 18:00</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Viernes</th>
+                    <td>14:00 - 15:00</td>
+                    <td>—</td>
+                    <td>10:00 - 11:00</td>
+                    <td>—</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Sábado</th>
+                    <td>10:00 - 11:00</td>
+                    <td>12:00 - 13:00</td>
+                    <td>—</td>
+                    <td>9:00 - 10:00</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+          
+
+
+          <footer class="row bg-light py-5">
+            <div class="col-12 col-md-6 offset-md-3">
+              <form
+                id="formularioFooter"
+                class="needs-validation"
+                novalidate
+                role="form"
+                aria-label="Formulario de contacto en el pie de página">
+                <div class="mb-3">
+                  <label for="emailFooter" class="form-label h6">Suscríbete a nuestro newsletter</label>
+                  <input type="email" class="form-control" id="emailFooter" required  aria-required="true" aria-describedby="emailFooterError" placeholder="Correo electrónico"/>
+                  <div id="emailFooterError" class="invalid-feedback">Ingresá un email válido.</div>
+                </div>
+                <button type="submit" class="btn btn-primary" id="btnEnviarFooter" aria-label="Enviar formulario de contacto">
+                  <span id="spinnerFooter" class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+                  <span id="btnTextFooter">Enviar</span>
+                </button>
+              </form>
+            </div>
+          
+            <!-- Mapa de Google apuntando a San Salvador de Jujuy -->
+            <div class="col-12 mt-4">
+              <iframe
+                title="Mapa de ubicación - Sport Energy Gym"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3582.2553722327285!2d-65.30771962483958!3d-24.185786878351385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941bc441c27493ed%3A0xd8960ad78e8c179!2sSan%20Salvador%20de%20Jujuy%2C%20Jujuy!5e0!3m2!1ses!2sar!4v1713356816169!5m2!1ses!2sar"
+                width="100%"
+                height="300"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+        </footer>
+    </div>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>

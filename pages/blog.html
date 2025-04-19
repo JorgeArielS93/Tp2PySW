@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Blog</title>
+</head>
+<body>
+    <div class="container">
+        <header class="row">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark" role="navigation" aria-label="Menú principal">
+              <div class="container-fluid">
+                <a class="navbar-brand" href="/index.html">Sport Energy Gym</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Alternar navegación">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                      <a class="nav-link" href="/pages/clases.html">Clases</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/pages/entrenadores.html">Entrenadores</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/pages/precios.html">Precios</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/pages/blog.html">Blog</a>
+                    </li>
+                    <!-- Contacto con submenú -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownContacto"  role="button" aria-expanded="false">
+                          Contacto
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownContacto">
+                            <li><a class="dropdown-item" href="/pages/contacto.html">Formulario</a></li>
+                        </ul>
+                      </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </header>
+    
+          <section class="blog-fitness-section py-5">
+            <div class="container">
+              <h2 class="text-center mb-4">Blog Fitness - Estilo Revista</h2>
+          
+              <!-- Filtros por tags -->
+              <div class="filtros-blog text-center mb-4">
+                <button class="btn btn-outline-dark mx-1 active" data-filter="todos" aria-pressed="true">Todos</button>
+                <button class="btn btn-outline-dark mx-1" data-filter="nutricion">Nutrición</button>
+                <button class="btn btn-outline-dark mx-1" data-filter="rutinas">Rutinas</button>
+                <button class="btn btn-outline-dark mx-1" data-filter="bienestar">Bienestar</button>
+              </div>
+            </div>
+          </section>
+
+          <section class="card-group row row-cols-1 row-cols-md-3 g-4 blog-grid blog-fitness-section py-5" data-aos="zoom-in">
+            
+            <div class="col blog-article" data-categoria="nutricion">
+                <div class="card h-100">
+                  <img src="../img/nutricion1.jpg" class="card-img-top" alt="Nutrición saludable">
+                  <div class="card-body">
+                    <h5 class="card-title">Alimentos que potencian tu rendimiento</h5>
+                    <p class="card-text">Descubre los mejores alimentos para antes y después de entrenar.</p>
+                  </div>
+                </div>
+              </div>
+            <div class="col blog-article" data-categoria="rutinas">
+                <div class="card h-100">
+                  <img src="../img/rutina1.jpg" class="card-img-top" alt="Rutina quema grasa">
+                  <div class="card-body">
+                    <h5 class="card-title">Rutina quema grasa de 20 minutos</h5>
+                    <p class="card-text">Entrena desde casa con este circuito eficaz para perder grasa corporal.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col blog-article" data-categoria="bienestar">
+                <div class="card h-100">
+                  <img src="../img/bienestar1.jpg" class="card-img-top" alt="Mindfulness">
+                  <div class="card-body">
+                    <h5 class="card-title">Beneficios del mindfulness en el fitness</h5>
+                    <p class="card-text">El equilibrio mental es clave para un cuerpo saludable.</p>
+                  </div>
+                </div>
+              </div>
+          </section>
+
+          <section class="comentarios-section container my-5" data-aos="fade-up">
+            <h3 class="mb-4">Comentarios</h3>
+            <div class="comentario" tabindex="0">
+              <p class="comentario-text">¡Excelente rutina, me encantó el entrenamiento funcional!</p>
+              <div class="comentario-footer">
+                <span class="comentario-nombre">María López</span>
+                <button class="btn-responder">Responder</button>
+                <button class="btn-destacar">Destacar</button>
+              </div>
+            </div>
+            <div class="comentario" tabindex="0">
+              <p class="comentario-text">Muy buenos consejos de nutrición 💪</p>
+              <div class="comentario-footer">
+                <span class="comentario-nombre">Carlos Gómez</span>
+                <button class="btn-responder">Responder</button>
+                <button class="btn-destacar">Destacar</button>
+              </div>
+            </div>
+          </section>          
+    
+        <footer class="row bg-light py-5">
+            <div class="col-12 col-md-6 offset-md-3">
+              <form
+                id="formularioFooter"
+                class="needs-validation"
+                novalidate
+                role="form"
+                aria-label="Formulario de contacto en el pie de página">
+                <div class="mb-3">
+                  <label for="emailFooter" class="form-label h6">Suscríbete a nuestro newsletter</label>
+                  <input type="email" class="form-control" id="emailFooter" required  aria-required="true" aria-describedby="emailFooterError" placeholder="Correo electrónico"/>
+                  <div id="emailFooterError" class="invalid-feedback">Ingresá un email válido.</div>
+                </div>
+                <button type="submit" class="btn btn-primary" id="btnEnviarFooter" aria-label="Enviar formulario de contacto">
+                  <span id="spinnerFooter" class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+                  <span id="btnTextFooter">Enviar</span>
+                </button>
+              </form>
+            </div>
+          
+            <!-- Mapa de Google apuntando a San Salvador de Jujuy -->
+            <div class="col-12 mt-4">
+              <iframe
+                title="Mapa de ubicación - Sport Energy Gym"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3582.2553722327285!2d-65.30771962483958!3d-24.185786878351385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941bc441c27493ed%3A0xd8960ad78e8c179!2sSan%20Salvador%20de%20Jujuy%2C%20Jujuy!5e0!3m2!1ses!2sar!4v1713356816169!5m2!1ses!2sar"
+                width="100%"
+                height="300"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+        </footer>
+    </div>
+<script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="../js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    once: true,
+    duration: 800,
+  });
+</script>
+</body>
+</html>

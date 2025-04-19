@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Clases</title>
+</head>
+<body>
+    <div class="container">
+        <header class="row">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark" role="navigation" aria-label="Menú principal">
+              <div class="container-fluid">
+                <a class="navbar-brand" href="/index.html">Sport Energy Gym</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Alternar navegación">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                      <a class="nav-link" href="/pages/clases.html">Clases</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/pages/entrenadores.html">Entrenadores</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/pages/precios.html">Precios</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/pages/blog.html">Blog</a>
+                    </li>
+                    <!-- Contacto con submenú -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownContacto" role="button" aria-expanded="false">
+                          Contacto
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownContacto">
+                          <li><a class="dropdown-item" href="/pages/contacto.html">Formulario</a></li>
+                        <!--  <li><a class="dropdown-item" href="#mapa">Ubicación</a></li> -->
+                        <!--  <li><a class="dropdown-item" href="mailto:info@gym.com">Email</a></li> -->
+                        </ul>
+                      </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </header>
+          <section class="entrenadores-section container py-5" aria-labelledby="titulo-entrenadores">
+            <h2 id="titulo-entrenadores" class="text-center mb-4">Nuestros Entrenadores</h2>
+            <div class="row g-4">
+              
+              <!-- ENTRENADOR 1 -->
+              <div class="col-md-6 col-lg-3">
+                <div class="flip-card" tabindex="0">
+                  <div class="flip-card-inner">
+                    <div class="flip-card-front p-3 shadow">
+                      <img src="../img/entrenador1.jpg" class="img-fluid rounded mb-2" alt="Foto del entrenador Juan Pérez">
+                      <h5 class="fw-bold">Juan Pérez</h5>
+                      <p>Musculación & Fuerza</p>
+                    </div>
+                    <div class="flip-card-back p-3 shadow">
+                      <div class="habilidad">
+                        <label for="fuerza1">Fuerza</label>
+                        <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                          <div id="fuerza1" class="progress-bar bg-success" data-value="95" aria-valuenow="95"></div>
+                        </div>
+                      </div>
+                      <div class="rating" role="radiogroup" aria-label="Valoración de Juan">
+                        <input type="radio" name="rating1" id="estrella1-5"><label for="estrella1-5" aria-label="5 estrellas">★</label>
+                        <input type="radio" name="rating1" id="estrella1-4"><label for="estrella1-4" aria-label="4 estrellas">★</label>
+                        <input type="radio" name="rating1" id="estrella1-3"><label for="estrella1-3" aria-label="3 estrellas">★</label>
+                        <input type="radio" name="rating1" id="estrella1-2"><label for="estrella1-2" aria-label="2 estrellas">★</label>
+                        <input type="radio" name="rating1" id="estrella1-1"><label for="estrella1-1" aria-label="1 estrella">★</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          
+              <!-- ENTRENADOR 2 -->
+              <div class="col-md-6 col-lg-3">
+                <div class="flip-card" tabindex="0">
+                  <div class="flip-card-inner">
+                    <div class="flip-card-front p-3 shadow">
+                      <img src="../img/entrenador2.jpg" class="img-fluid rounded mb-2" alt="Foto de la entrenadora Laura Gómez">
+                      <h5 class="fw-bold">Liam Gómez</h5>
+                      <p>Yoga & Flexibilidad</p>
+                    </div>
+                    <div class="flip-card-back p-3 shadow">
+                      <div class="habilidad">
+                        <label for="flex2">Flexibilidad</label>
+                        <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                          <div id="flex2" class="progress-bar bg-info" data-value="90" aria-valuenow="90"></div>
+                        </div>
+                      </div>
+                      <div class="rating" role="radiogroup" aria-label="Valoración de Laura">
+                        <input type="radio" name="rating2" id="estrella2-5"><label for="estrella2-5" aria-label="5 estrellas">★</label>
+                        <input type="radio" name="rating2" id="estrella2-4"><label for="estrella2-4" aria-label="4 estrellas">★</label>
+                        <input type="radio" name="rating2" id="estrella2-3"><label for="estrella2-3" aria-label="3 estrellas">★</label>
+                        <input type="radio" name="rating2" id="estrella2-2"><label for="estrella2-2" aria-label="2 estrellas">★</label>
+                        <input type="radio" name="rating2" id="estrella2-1"><label for="estrella2-1" aria-label="1 estrella">★</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          
+              <!-- ENTRENADOR 3 -->
+              <div class="col-md-6 col-lg-3">
+                <div class="flip-card" tabindex="0">
+                  <div class="flip-card-inner">
+                    <div class="flip-card-front p-3 shadow">
+                      <img src="../img/entrenador3.jpg" class="img-fluid rounded mb-2" alt="Foto del entrenador Carlos Ruiz">
+                      <h5 class="fw-bold">Carlos Ruiz</h5>
+                      <p>CrossFit & Alta Intensidad</p>
+                    </div>
+                    <div class="flip-card-back p-3 shadow">
+                      <div class="habilidad">
+                        <label for="intensidad3">Resistencia</label>
+                        <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                          <div id="intensidad3" class="progress-bar bg-warning" data-value="85" aria-valuenow="85"></div>
+                        </div>
+                      </div>
+                      <div class="rating" role="radiogroup" aria-label="Valoración de Carlos">
+                        <input type="radio" name="rating3" id="estrella3-5"><label for="estrella3-5" aria-label="5 estrellas">★</label>
+                        <input type="radio" name="rating3" id="estrella3-4"><label for="estrella3-4" aria-label="4 estrellas">★</label>
+                        <input type="radio" name="rating3" id="estrella3-3"><label for="estrella3-3" aria-label="3 estrellas">★</label>
+                        <input type="radio" name="rating3" id="estrella3-2"><label for="estrella3-2" aria-label="2 estrellas">★</label>
+                        <input type="radio" name="rating3" id="estrella3-1"><label for="estrella3-1" aria-label="1 estrella">★</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          
+              <!-- ENTRENADOR 4 -->
+              <div class="col-md-6 col-lg-3">
+                <div class="flip-card" tabindex="0">
+                  <div class="flip-card-inner">
+                    <div class="flip-card-front p-3 shadow">
+                      <img src="../img/entrenador4.jpg" class="img-fluid rounded mb-2" alt="Foto de la entrenadora Sofía Martínez">
+                      <h5 class="fw-bold">Hernan Martínez</h5>
+                      <p>Spinning & Cardio</p>
+                    </div>
+                    <div class="flip-card-back p-3 shadow">
+                      <div class="habilidad">
+                        <label for="cardio4">Cardio</label>
+                        <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                          <div id="cardio4" class="progress-bar bg-danger" data-value="92" aria-valuenow="92"></div>
+                        </div>
+                      </div>
+                      <div class="rating" role="radiogroup" aria-label="Valoración de Sofía">
+                        <input type="radio" name="rating4" id="estrella4-5"><label for="estrella4-5" aria-label="5 estrellas">★</label>
+                        <input type="radio" name="rating4" id="estrella4-4"><label for="estrella4-4" aria-label="4 estrellas">★</label>
+                        <input type="radio" name="rating4" id="estrella4-3"><label for="estrella4-3" aria-label="3 estrellas">★</label>
+                        <input type="radio" name="rating4" id="estrella4-2"><label for="estrella4-2" aria-label="2 estrellas">★</label>
+                        <input type="radio" name="rating4" id="estrella4-1"><label for="estrella4-1" aria-label="1 estrella">★</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          
+            </div>
+          </section>
+          
+          <footer class="row bg-light py-5">
+            <div class="col-12 col-md-6 offset-md-3">
+              <form
+                id="formularioFooter"
+                class="needs-validation"
+                novalidate
+                role="form"
+                aria-label="Formulario de contacto en el pie de página">
+                <div class="mb-3">
+                  <label for="emailFooter" class="form-label h6">Suscríbete a nuestro newsletter</label>
+                  <input type="email" class="form-control" id="emailFooter" required  aria-required="true" aria-describedby="emailFooterError" placeholder="Correo electrónico"/>
+                  <div id="emailFooterError" class="invalid-feedback">Ingresá un email válido.</div>
+                </div>
+                <button type="submit" class="btn btn-primary" id="btnEnviarFooter" aria-label="Enviar formulario de contacto">
+                  <span id="spinnerFooter" class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+                  <span id="btnTextFooter">Enviar</span>
+                </button>
+              </form>
+            </div>
+          
+            <!-- Mapa de Google apuntando a San Salvador de Jujuy -->
+            <div class="col-12 mt-4">
+              <iframe
+                title="Mapa de ubicación - Sport Energy Gym"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3582.2553722327285!2d-65.30771962483958!3d-24.185786878351385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941bc441c27493ed%3A0xd8960ad78e8c179!2sSan%20Salvador%20de%20Jujuy%2C%20Jujuy!5e0!3m2!1ses!2sar!4v1713356816169!5m2!1ses!2sar"
+                width="100%"
+                height="300"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+        </footer>
+    </div>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>

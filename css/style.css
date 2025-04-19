@@ -1,0 +1,406 @@
+/* ===============================
+   Video de fondo
+   =============================== */
+   video.object-fit-cover {
+    object-fit: cover;
+  }
+  
+  /* ===============================
+     Overlay centrado del hero
+     =============================== */
+  #hero-overlay {
+    z-index: 2;
+  }
+  
+  /* ===============================
+     Clases destacadas (cards)
+     =============================== */
+  .clase-card {
+    position: relative;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .clase-card:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    transform: scale(1.03);
+  }
+  
+  /* ===============================
+     Testimonios
+     =============================== */
+  .testimonios-section {
+    background-color: #f0f2f5;
+    padding: 2rem 0;
+  }
+  
+  .testimonios-section .testimonio {
+    background-color: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    margin: 1rem;
+    text-align: center;
+  }
+  
+  .testimonios-section .testimonio-text {
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #333;
+  }
+  
+  .testimonios-section .testimonio-autor {
+    font-weight: bold;
+    color: #007bff;
+    margin-top: 0.5rem;
+  }
+  
+  .testimonios-section .carousel-control-prev-icon,
+  .testimonios-section .carousel-control-next-icon {
+    background-color: #007bff;
+    border-radius: 50%;
+    padding: 1rem;
+  }
+  
+  /* ===============================
+     Filtros CSS
+     =============================== */
+  .filtros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+  }
+  
+  .filtros input {
+    display: none;
+  }
+  
+  .filtro-labels {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .filtro-labels label {
+    padding: 0.5rem 1rem;
+    background: #ddd;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .filtro-labels label:hover {
+    background: #bbb;
+  }
+  
+  #todos:checked ~ .filtro-labels label[for="todos"],
+  #musculacion:checked ~ .filtro-labels label[for="musculacion"],
+  #crossfit:checked ~ .filtro-labels label[for="crossfit"],
+  #yoga:checked ~ .filtro-labels label[for="yoga"],
+  #spinning:checked ~ .filtro-labels label[for="spinning"] {
+    background-color: #222;
+    color: #fff;
+  }
+  
+  #musculacion:checked ~ .galeria .clase:not(.musculacion),
+  #crossfit:checked ~ .galeria .clase:not(.crossfit),
+  #yoga:checked ~ .galeria .clase:not(.yoga),
+  #spinning:checked ~ .galeria .clase:not(.spinning) {
+    display: none;
+  }
+  
+  #todos:checked ~ .galeria .clase {
+    display: block;
+  }
+  
+  /* ===============================
+     Galería de Clases
+     =============================== */
+  .galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1em;
+    padding: 1em;
+  }
+  
+  .clase {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .clase img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s;
+  }
+  
+  .clase:hover img {
+    transform: scale(1.1);
+  }
+  
+  .clase::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .clase:hover::after {
+    opacity: 1;
+  }
+  
+  /* ===============================
+     Tabla de horarios de clases
+     =============================== */
+  .horarios table th,
+  .horarios table td {
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+  
+  @media (max-width: 576px) {
+    .horarios h2 {
+      font-size: 1.5rem;
+    }
+  }
+
+  /* ===============================
+   ENTRENADORES: Flip Cards
+   =============================== */
+.entrenadores-section .flip-card {
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  perspective: 1000px;
+}
+
+.entrenadores-section .flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.entrenadores-section .flip-card:hover .flip-card-inner,
+.entrenadores-section .flip-card:focus-within .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.entrenadores-section .flip-card-front,
+.entrenadores-section .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.entrenadores-section .flip-card-front {
+  background-color: #fff;
+  color: black;
+}
+
+.entrenadores-section .flip-card-back {
+  background-color: #007bff;
+  color: white;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ===============================
+   ENTRENADORES: Barras de habilidad
+   =============================== */
+.entrenadores-section .habilidad {
+  margin-bottom: 1rem;
+}
+
+.entrenadores-section .habilidad label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.entrenadores-section .progress {
+  height: 1.5rem;
+  border-radius: 1rem;
+}
+
+.entrenadores-section .progress-bar {
+  width: 0;
+  transition: width 1.5s ease-in-out;
+}
+
+/* ===============================
+   ENTRENADORES: Rating con estrellas
+   =============================== */
+.entrenadores-section .rating {
+  direction: rtl;
+  display: inline-flex;
+  gap: 0.2rem;
+}
+
+.entrenadores-section .rating input {
+  display: none;
+}
+
+.entrenadores-section .rating label {
+  font-size: 1.5rem;
+  color: #ddd;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.entrenadores-section .rating input:checked ~ label,
+.entrenadores-section .rating label:hover,
+.entrenadores-section .rating label:hover ~ label {
+  color: gold;
+}
+
+.entrenadores-section .rating input:focus + label {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+}
+
+/* ===============================
+   ENTRENADORES: Responsive
+   =============================== */
+@media (max-width: 768px) {
+  .entrenadores-section .flip-card {
+    margin-bottom: 2rem;
+  }
+}
+
+/* ===============================
+   ENTRENADORES: Ajustes de altura y espaciado para flip cards
+   =============================== */
+   .entrenadores-section .flip-card {
+    height: 400px; /* Altura fija para que todo entre bien */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .entrenadores-section .flip-card-inner {
+    height: 100%;
+  }
+  
+  .entrenadores-section .flip-card-front,
+  .entrenadores-section .flip-card-back {
+    padding: 1rem;
+    box-sizing: border-box;
+    overflow-y: auto;
+  }
+  
+  .entrenadores-section .flip-card-front img {
+    max-height: 160px;
+    object-fit: cover;
+    width: 100%;
+  }
+  
+  /* Responsive para móviles: un poco más baja */
+  @media (max-width: 768px) {
+    .entrenadores-section .flip-card {
+      height: 350px;
+    }
+  }
+  /* EStilos tabla de precios*/
+  .tabla-precios .table-hover tbody tr:hover {
+    background-color: #e9f5ff;
+  }
+  
+  .tabla-precios .table td:hover,
+  .tabla-precios .table th:hover {
+    background-color: #d0ebff;
+    cursor: pointer;
+  }
+  
+  /* ===============================
+   Blog Fitness - Estilo Revista
+   =============================== */
+.blog-fitness-section .filtros-blog button.active {
+  background-color: #212529;
+  color: #fff;
+  border-color: #212529;
+}
+
+.blog-fitness-section .blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.blog-fitness-section .card {
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.blog-fitness-section .card:hover {
+  transform: scale(1.03);
+}
+
+.comentario {
+  position: relative;
+  background: #fff;
+  padding: 1rem 1.5rem 1rem 4rem;
+  border-left: 4px solid #007bff;
+  border-radius: 1rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0,0,0,0.05);
+}
+
+.comentario::before {
+  content: "";
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: url('https://i.pravatar.cc/100') center/cover no-repeat;
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #007bff;
+}
+
+.comentario-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.btn-responder,
+.btn-destacar {
+  background: none;
+  border: none;
+  color: #007bff;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.comentario.destacado {
+  background: #fffbe6;
+  border-color: #ffc107;
+}
+
+.comentario.destacado::before {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #ffc107;
+}
